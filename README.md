@@ -7,3 +7,4 @@ Config files for shell and neovim.
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [oh-my-posh](https://ohmyposh.dev/)
+- [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
