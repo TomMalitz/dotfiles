@@ -8,6 +8,7 @@
 :set mouse=a
 :set clipboard=unnamed
 :set wrap!
+:set scrolloff=5
 ":set shell=/usr/local/microsoft/powershell/7/pwsh
 
 call plug#begin()
@@ -29,6 +30,7 @@ Plug 'alvan/vim-closetag'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'tpope/vim-commentary'
 
 " LSP Support
 Plug 'neovim/nvim-lspconfig'
@@ -52,29 +54,35 @@ Plug 'mfussenegger/nvim-jdtls'
 
 call plug#end()
 
+let mapleader=";"
+
 " jk to exit insert move
 :inoremap kj <Esc>
 :inoremap jk <Esc>
+
+" show open buffer list
+nnoremap <silent> <Leader>l :ls<CR>
 
 " save with \s enter
 noremap <Leader>s :update<CR>
 
 " color scheme
-let g:tokyonight_style="storm"
-let g:tokyonight_transparent=1
-let g:tokyonight_transparent_sidebar=1
-let g:tokyonight_dark_sidebar=0
-let g:tokyonight_dark_float=0
-let g:tokyonight_colors = {'fg_gutter': '#51597a', 'bg_float': '#fff'}
-colorscheme tokyonight
+"let g:tokyonight_style="storm"
+"let g:tokyonight_transparent=1
+"let g:tokyonight_transparent_sidebar=1
+"let g:tokyonight_dark_sidebar=0
+"let g:tokyonight_dark_float=0
+"let g:tokyonight_colors = {'fg_gutter': '#51597a', 'bg_float': '#fff'}
+"colorscheme tokyonight
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-b> :NERDTreeToggle<CR>
+nnoremap <Space> :NERDTreeToggle<CR>
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsable="~"
 let g:NERDTreeShowHidden=1
+let g:NERDTreeIgnore=['\.DS_Store$', '\.git$']
 
 " vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.vue'
@@ -88,7 +96,7 @@ nnoremap <silent> fh <cmd>Telescope help_tags<cr>
 " clear search buffer
 nnoremap <silent> <Esc><Esc> :let @/ = ""<CR>
 " keep search buffer and toggle search highlight
-nnoremap <silent> <Space> :set hlsearch!<CR>
+" nnoremap <silent> <Space> :set hlsearch!<CR>
 
 " air-line
 let g:airline_powerline_fonts = 1
@@ -103,12 +111,3 @@ let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
 
 nnoremap <silent> <Leader>f :ALEFix<CR>
-
-lua <<EOF
-
--- lsp-zero setup
-local lsp = require('lsp-zero')
-lsp.preset('recommended')
-lsp.setup()
-
-EOF

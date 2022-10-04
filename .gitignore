@@ -1,0 +1,11 @@
+
+.isolated-storage
+NuGet
+coc
+configstore
+filezilla
+iterm2
+jgit
+stetic/library-cache
+xbuild
+.DS_Store

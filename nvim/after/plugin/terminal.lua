@@ -1,7 +1,11 @@
 -- Toggle Term settings
 require('toggleterm').setup {
-  direction = 'float',
-	open_mapping = [[<C-j>]]
+  -- direction = 'float',
+	open_mapping = [[<C-j>]],
+  persist_mode = true,
+  --float_opts = {
+  --  border = 'curved'
+ -- }
 }
 
 local Terminal = require("toggleterm.terminal").Terminal

@@ -1,4 +1,5 @@
 -- Telescope settings
+require('telescope').load_extension('fzf')
 require('telescope').setup {
   defaults = { 
     file_ignore_patterns = {
@@ -10,7 +11,10 @@ require('telescope').setup {
       theme = "dropdown"
     },
     buffers = {
-      theme = "dropdown"
+      sort_mru = true,
+      sort_lastused = true,
+--      ignore_current_buffer = true,
+      theme = "dropdown",
     }
   },
   extensions = {
@@ -22,4 +26,3 @@ require('telescope').setup {
     }
   }
 }
--- require('telescope').load_extension('fzf')
