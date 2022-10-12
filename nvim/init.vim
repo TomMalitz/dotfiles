@@ -66,15 +66,6 @@ nnoremap <silent> <Leader>l :ls<CR>
 " save with \s enter
 noremap <Leader>s :update<CR>
 
-" color scheme
-"let g:tokyonight_style="storm"
-"let g:tokyonight_transparent=1
-"let g:tokyonight_transparent_sidebar=1
-"let g:tokyonight_dark_sidebar=0
-"let g:tokyonight_dark_float=0
-"let g:tokyonight_colors = {'fg_gutter': '#51597a', 'bg_float': '#fff'}
-"colorscheme tokyonight
-
 nnoremap <C-f> :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
 nnoremap <Space> :NERDTreeToggle<CR>
@@ -86,12 +77,6 @@ let g:NERDTreeIgnore=['\.DS_Store$', '\.git$']
 
 " vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.vue'
-
-" telescope fuzzy finder
-nnoremap <silent> ff <cmd>Telescope find_files<cr>
-nnoremap <silent> fb <cmd>Telescope buffers<cr>
-nnoremap <silent> fg <cmd>Telescope live_grep<cr>
-nnoremap <silent> fh <cmd>Telescope help_tags<cr>
 
 " clear search buffer
 nnoremap <silent> <Esc><Esc> :let @/ = ""<CR>

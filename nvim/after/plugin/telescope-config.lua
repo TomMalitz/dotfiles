@@ -26,3 +26,11 @@ require('telescope').setup {
     }
   }
 }
+
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', 'ff', builtin.find_files, {})
+vim.keymap.set('n', 'fg', builtin.live_grep, {})
+vim.keymap.set('n', 'fb', builtin.buffers, {})
+vim.keymap.set('n', 'fr', builtin.resume, {})
+vim.keymap.set('n', 'fn', builtin.help_tags, {})
