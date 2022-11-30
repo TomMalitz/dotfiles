@@ -3,7 +3,7 @@ require('telescope').load_extension('fzf')
 require('telescope').setup {
   defaults = { 
     file_ignore_patterns = {
-      "node_modules", "dist", "target"
+      "node_modules", "node", "dist", "target"
     } 
   },
   pickers = {
@@ -13,8 +13,11 @@ require('telescope').setup {
     buffers = {
       sort_mru = true,
       sort_lastused = true,
---      ignore_current_buffer = true,
+      ignore_current_buffer = true,
       theme = "dropdown",
+    },
+    live_grep = {
+      theme = "dropdown"
     }
   },
   extensions = {

@@ -8,33 +8,49 @@
 :set mouse=a
 :set clipboard=unnamed
 :set wrap!
-:set scrolloff=5
+:set scrolloff=25
+:set noswf
+" :set timeoutlen=500
 ":set shell=/usr/local/microsoft/powershell/7/pwsh
 
 call plug#begin()
 
-Plug 'dense-analysis/ale'
-Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'https://github.com/preservim/nerdtree'
-Plug 'https://github.com/rafi/awesome-vim-colorschemes'
+" Plug 'tc50cal/vim-terminal'
+" Plug 'tribela/vim-transparent'
+" Plug 'jremmen/vim-ripgrep'
+
+" UI
+Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
-Plug 'https://github.com/tc50cal/vim-terminal'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'tribela/vim-transparent'
-Plug 'akinsho/toggleterm.nvim'
-Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive'
-Plug 'alvan/vim-closetag'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Color schemes
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'tpope/vim-commentary'
+" Plug 'ellisonleao/gruvbox.nvim'
+
+" Tools
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'akinsho/toggleterm.nvim'
+Plug 'preservim/nerdtree' 
+Plug 'wincent/ferret' " muli file search
+Plug 'tpope/vim-fugitive'
+
+" Text Editing
+Plug 'alvan/vim-closetag'
+Plug 'numToStr/Comment.nvim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'tpope/vim-surround'
 
 " LSP Support
+Plug 'dense-analysis/ale'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+" Plug 'williamboman/nvim-lsp-installer'
+
 
 " Autocompletion
 Plug 'hrsh7th/nvim-cmp'
@@ -57,7 +73,7 @@ call plug#end()
 let mapleader=";"
 
 " jk to exit insert move
-:inoremap kj <Esc>
+" :inoremap kj <Esc>kjjk
 :inoremap jk <Esc>
 
 " show open buffer list
@@ -65,6 +81,8 @@ nnoremap <silent> <Leader>l :ls<CR>
 
 " save with \s enter
 noremap <Leader>s :update<CR>
+" open horizontal buffer
+noremap <Leader>w :sp<CR>
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
