@@ -1,20 +1,28 @@
 -- Telescope settings
-require('telescope').load_extension('fzf')
+
+local actions = require("telescope.actions")
 require('telescope').setup {
   defaults = { 
     file_ignore_patterns = {
       "node_modules", "node", "dist", "target"
-    } 
+    },
+    mappings = {
+      i = {
+        ["<esc>"] = actions.close
+      }
+    }
   },
   pickers = {
     find_files = {
-      theme = "dropdown"
+      theme = "dropdown",
+      previewer = false
     },
     buffers = {
       sort_mru = true,
       sort_lastused = true,
       ignore_current_buffer = true,
       theme = "dropdown",
+      previewer = false
     },
     live_grep = {
       theme = "dropdown"
@@ -29,6 +37,7 @@ require('telescope').setup {
     }
   }
 }
+require('telescope').load_extension('fzf')
 
 
 local builtin = require('telescope.builtin')

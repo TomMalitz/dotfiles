@@ -3,7 +3,7 @@ require('toggleterm').setup {
   -- direction = 'float',
 	open_mapping = [[<C-j>]],
   persist_mode = true,
-  size = 50
+  size = 40
   --float_opts = {
   --  border = 'curved'
  -- }
