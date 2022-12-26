@@ -3,14 +3,21 @@ require('toggleterm').setup {
   -- direction = 'float',
 	open_mapping = [[<C-j>]],
   persist_mode = true,
-  size = 40
+  size = 30
   --float_opts = {
   --  border = 'curved'
  -- }
 }
 
 local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", count = 3 })
+local lazygit = Terminal:new({
+  cmd = "lazygit",
+  count = 3,
+  direction = 'float',
+  float_opts = {
+    border = 'none'
+  }
+})
 
 function _lazygit_toggle()
   lazygit:toggle()

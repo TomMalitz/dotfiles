@@ -19,6 +19,7 @@ local config = {
     '-Dlog.protocol=true',
     '-Dlog.level=ALL',
     '-Xms1g',
+    '-javaagent:/Users/thomasmalitz/.config/dev/plugins/lombok.jar', -- add jar path for lombok
     '--add-modules=ALL-SYSTEM',
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
@@ -76,3 +77,4 @@ vim.api.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 vim.api.nvim_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 vim.api.nvim_set_keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 vim.api.nvim_set_keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>",{ silent = true })
+vim.api.nvim_set_keymap('n', 'gk', '<cmd>lua vim.lsp.buf.references() && vim.cmd("copen")<CR>', opts)

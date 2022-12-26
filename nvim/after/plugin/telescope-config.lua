@@ -10,7 +10,8 @@ require('telescope').setup {
       i = {
         ["<esc>"] = actions.close
       }
-    }
+    },
+    wrap_results = true
   },
   pickers = {
     find_files = {

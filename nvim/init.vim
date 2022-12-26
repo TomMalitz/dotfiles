@@ -15,10 +15,6 @@
 
 call plug#begin()
 
-" Plug 'tc50cal/vim-terminal'
-" Plug 'tribela/vim-transparent'
-" Plug 'jremmen/vim-ripgrep'
-
 " UI
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
@@ -26,7 +22,6 @@ Plug 'ryanoasis/vim-devicons'
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-" Plug 'ellisonleao/gruvbox.nvim'
 
 " Tools
 Plug 'nvim-lua/plenary.nvim'
@@ -34,7 +29,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'preservim/nerdtree' 
-Plug 'wincent/ferret' " muli file search
+Plug 'wincent/ferret'
 Plug 'tpope/vim-fugitive'
 
 " Text Editing
@@ -46,13 +41,11 @@ Plug 'tpope/vim-surround'
 " LSP Support
 Plug 'dense-analysis/ale'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'mfussenegger/nvim-jdtls'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-" Plug 'williamboman/nvim-lsp-installer'
-
-
-" Autocompletion
+Plug 'VonHeikemen/lsp-zero.nvim'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -64,10 +57,6 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
-" LSP Setup
-Plug 'VonHeikemen/lsp-zero.nvim'
-Plug 'mfussenegger/nvim-jdtls'
-
 call plug#end()
 
 let mapleader=";"
@@ -78,6 +67,10 @@ let mapleader=";"
 
 " show open buffer list
 nnoremap <silent> <Leader>l :ls<CR>
+
+" center after vertical jumps
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
 " save with \s enter
 noremap <Leader>s :update<CR>
