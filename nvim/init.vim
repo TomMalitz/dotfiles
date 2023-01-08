@@ -31,6 +31,8 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'preservim/nerdtree' 
 Plug 'wincent/ferret'
 Plug 'tpope/vim-fugitive'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " requires yarn installed globally
+Plug 'folke/todo-comments.nvim'
 
 " Text Editing
 Plug 'alvan/vim-closetag'
@@ -61,6 +63,11 @@ call plug#end()
 
 let mapleader=";"
 
+augroup Markdown
+    autocmd!
+    autocmd FileType markdown set wrap
+augroup END
+
 " jk to exit insert move
 " :inoremap kj <Esc>kjjk
 :inoremap jk <Esc>
@@ -76,6 +83,12 @@ nnoremap <C-u> <C-u>zz
 noremap <Leader>s :update<CR>
 " open horizontal buffer
 noremap <Leader>w :sp<CR>
+
+" open todo quickfix list
+noremap <Leader>td :TodoQuickFix<CR>
+
+" open markdown preview
+noremap <Leader>mp :MarkdownPreview<CR>
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
@@ -102,6 +115,7 @@ if !exists('g:airline_symbols')
 endif
 
 " Ale linting and formatting
+" let g:ale_fixers = {'typescript': ['prettier', 'eslint'], 'javascript': ['prettier', 'eslint'], 'markdown' : ['pandoc']}
 let g:ale_fixers = ['prettier', 'eslint']
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
