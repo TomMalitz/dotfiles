@@ -10,7 +10,6 @@
 :set wrap!
 :set scrolloff=25
 :set noswf
-let mapleader=";"
 " :set timeoutlen=500
 ":set shell=/usr/local/microsoft/powershell/7/pwsh
 
@@ -61,6 +60,8 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
 call plug#end()
+
+let mapleader=";"
 
 augroup Markdown
     autocmd!
