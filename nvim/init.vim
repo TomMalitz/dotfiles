@@ -21,6 +21,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'ellisonleao/gruvbox.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Tools
@@ -33,6 +34,8 @@ Plug 'wincent/ferret'
 Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " requires yarn installed globally
 Plug 'folke/todo-comments.nvim'
+Plug 'danymat/neogen'
+Plug 'NMAC427/guess-indent.nvim'
 
 " Text Editing
 Plug 'alvan/vim-closetag'
@@ -101,6 +104,9 @@ let g:NERDTreeIgnore=['\.DS_Store$', '\.git$']
 
 " vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.vue'
+
+" don't auto close markdown previews
+let g:mkdp_auto_close = 0
 
 " clear search buffer
 nnoremap <silent> <Esc><Esc> :let @/ = ""<CR>

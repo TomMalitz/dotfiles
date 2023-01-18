@@ -1,6 +1,7 @@
 -- Telescope settings
 
 local actions = require("telescope.actions")
+
 require('telescope').setup {
   defaults = { 
     file_ignore_patterns = {
@@ -11,22 +12,31 @@ require('telescope').setup {
         ["<esc>"] = actions.close
       }
     },
-    wrap_results = true
+    -- wrap_results = true
   },
   pickers = {
     find_files = {
       theme = "dropdown",
-      previewer = false
+      -- previewer = true,
+      layout_config = {
+        width = 0.6
+      }
     },
     buffers = {
       sort_mru = true,
       sort_lastused = true,
       ignore_current_buffer = true,
       theme = "dropdown",
-      previewer = false
+      -- previewer = true,
+      layout_config = {
+        width = 0.6
+      }
     },
     live_grep = {
-      theme = "dropdown"
+      theme = "dropdown",
+      layout_config = {
+        width = 0.6
+      }
     }
   },
   extensions = {
