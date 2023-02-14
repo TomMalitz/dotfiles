@@ -2,13 +2,17 @@
 Config files for shell and neovim. 
 
 ## System dependencies
-- [powershell](https://docs.microsoft.com/en-us/powershell/)
 
 ### Windows
 - [scoop](https://scoop.sh/)
 
-### MacOS
+### macOS
 - [brew](https://brew.sh/)
+
+### General
+- [powershell](https://docs.microsoft.com/en-us/powershell/)
+  - Windows: `winget install --id Microsoft.Powershell --source winget`
+  - macOS: `brew install --cask powershell`
 
 # Installation
 
