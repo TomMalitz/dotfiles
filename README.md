@@ -3,9 +3,15 @@ Config files for shell and neovim.
 
 ## System dependencies
 - [powershell](https://docs.microsoft.com/en-us/powershell/)
-- [neovim](https://neovim.io/)
-- [vim-plug](https://github.com/junegunn/vim-plug)
-- [lazygit](https://github.com/jesseduffield/lazygit)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [oh-my-posh](https://ohmyposh.dev/)
-- [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
+
+### Windows
+- [scoop](https://scoop.sh/)
+
+### MacOS
+- [brew](https://brew.sh/)
+
+# Installation
+
+Run the `.\install.ps1` script from a powershell instance to install the dependencies and sync the config files to their correct place.
+
+Run the `.\sync.ps1` to sync the config files ONLY.
