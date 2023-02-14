@@ -8,6 +8,10 @@ lsp.preset('recommended')
 lsp.setup()
 
 -- volar setup
-require'lspconfig'.volar.setup{
-  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+require'lspconfig'.volar.setup {
+  filetypes = {'typescript', 'javascript', 'vue', 'json'}
+}
+
+require'lspconfig'.tsserver.setup {
+  filetypes = {'typescript', 'javascript', 'tsx', 'jsx'}
 }
