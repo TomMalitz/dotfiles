@@ -1,1 +1,1 @@
-. /Users/thomasmalitz/.config/powershell/user_profile.ps1
+~/.config/powershell/user_profile.ps1
