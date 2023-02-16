@@ -22,5 +22,31 @@ return {
     {'<C-f>', '<cmd>NvimTreeFocus<cr>'},
     {'<space>', '<cmd>NvimTreeToggle<cr>'},
   },
-  config = true
+  config = function()
+    require("nvim-tree").setup({
+      sort_by = "case_sensitive",
+      view = {
+        mappings = {
+          custom_only = true,
+          list = {
+            { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
+            { key = "<Tab>", action = "preview" },
+            { key = "D", action = "trash" },
+            { key = "R", action = "refresh" },
+            { key = "X", action = "collapse_all" },
+            { key = "F", action = "live_filter" },
+            { key = "C", action = "clear_live_filter" },
+            { key = "a", action = "create" },
+            { key = "d", action = "remove" },
+            { key = "r", action = "rename" },
+            { key = "x", action = "cut" },
+            { key = "c", action = "copy" },
+            { key = "p", action = "paste" },
+            { key = "s", action = "system_open" },
+            { key = "m", action = "toggle_mark" },
+          },
+        },
+      }
+    })
+  end
 }
