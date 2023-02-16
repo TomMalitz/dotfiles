@@ -4,12 +4,12 @@ return {
   priority = 1000,
   config = function()
     require("tokyonight").setup({
-      style="storm", -- storm, moon, night, day
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent"
-      },
+      style="moon", -- storm, moon, night, day
+      -- transparent = true,
+      -- styles = {
+      --   sidebars = "transparent",
+      --   floats = "transparent"
+      -- },
       on_colors = function(colors)
         colors.fg_gutter = "#4a527c"
       end
