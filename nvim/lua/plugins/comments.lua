@@ -13,5 +13,12 @@ return {
       merge_keywords = false
     },
   },
+  { 
+    "danymat/neogen", 
+    dependencies = "nvim-treesitter/nvim-treesitter", 
+    config = true,
+    -- Uncomment next line if you want to follow only stable versions
+    -- version = "*" 
+  },
   {'numToStr/Comment.nvim', config = true},
 }
