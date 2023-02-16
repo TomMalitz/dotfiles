@@ -5,28 +5,31 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#F1FA8C",
+          "foreground": "#45F1C2",
+          "style": "plain",
+          "template": "\uf508 {{ .UserName }} on",
+          "type": "session"
+        },
+        {
+          "foreground": "#0CA0D8",
           "properties": {
-            "style": "folder"
+            "folder_separator_icon": "/",
+            "style": "full"
           },
-          "style": "diamond",
-          "template": "<#42E66C>\u2B22 </> <b>{{ .Path }}</b> ",
+          "style": "plain",
+          "template": " \uf07b {{ .Path }} ",
           "type": "path"
         },
         {
-          "foreground": "#43CCEA",
+          "foreground": "#14A5AE",
+          "powerline_symbol": "\ue0b0",
           "properties": {
-            "branch_icon": ""
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true
           },
-          "style": "diamond",
-          "template": "<#ffffff>\u26A1</><b> {{ .HEAD }}</b>",
+          "style": "plain",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "type": "git"
-        },
-        {
-          "foreground": "#ff0000",
-          "style": "diamond",
-          "template": "<#ff0000> \u25C9 </>",
-          "type": "text"
         }
       ],
       "type": "prompt"
@@ -36,15 +39,20 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#000000",
+          "foreground": "#cd5e42",
           "style": "plain",
-          "template": ">",
+          "template": "\ue3bf ",
+          "type": "root"
+        },
+        {
+          "foreground": "#CD4277",
+          "style": "plain",
+          "template": "# ",
           "type": "text"
         }
       ],
       "type": "prompt"
     }
   ],
-  "final_space": true,
   "version": 2
 }

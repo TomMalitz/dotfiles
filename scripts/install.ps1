@@ -22,16 +22,21 @@ if($isWindows) {
   scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
 }
 elseif($isMacOS) {
-    // TODO
+  Write-Host "OS detected: macOS"
+  brew install neovim
+  brew install ripgrep
+  brew install lazygit
+  brew install jandedobbeleer/oh-my-posh/oh-my-posh
 }
 elseif($isLinux) {
-    // TODO
+  Write-Host "OS detected: Linux"
 }
 
+Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
 Install-Module -Name Terminal-Icons -Repository PSGallery
 Install-Module -Name PSFzf -Repository PSGallery
 
-Write-Host "dependencies Installed " -NoNewLine
+Write-Host "dependencies installed " -NoNewLine
 Write-Host @greenCheck
 
 ./sync.ps1
