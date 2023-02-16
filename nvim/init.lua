@@ -56,6 +56,9 @@ nmap("<Leader>w", ":sp<CR>")
 -- show open buffer list
 nmap("<Leader>l", ":ls<CR>")
 
+-- clear search buffer
+nmap("<Esc><Esc>", ':let @/ = ""<CR>')
+
 -- center after vertical jumps
 nmap("<C-d>", "<C-d>zz")
 nmap("<C-u>", "<C-u>zz")
