@@ -5,7 +5,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.smarttab = true
-vim.opt.mouse = a
+vim.opt.mouse:append('a')
 vim.opt.clipboard:append { "unnamed", "unnamedplus" }
 vim.opt.wrap = false
 vim.opt.scrolloff = 25
