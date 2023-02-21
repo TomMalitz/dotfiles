@@ -1,5 +1,5 @@
 # dotfiles
-Config files for shell and neovim. 
+Config files for PowerShell and Neovim. 
 
 ## System dependencies
 
