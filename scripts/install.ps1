@@ -16,6 +16,7 @@ if($isWindows) {
   #   Write-Output "Issue: $PSItem"
   # }
   scoop bucket add extras
+  scoop install wezterm
   scoop install neovim
   scoop install ripgrep
   scoop install lazygit
@@ -23,6 +24,8 @@ if($isWindows) {
 }
 elseif($isMacOS) {
   Write-Host "OS detected: macOS"
+  brew tap wez/wezterm
+  brew install --cask wez/wezterm/wezterm
   brew install neovim
   brew install ripgrep
   brew install lazygit

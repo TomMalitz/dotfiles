@@ -8,14 +8,10 @@ vim.opt.smarttab = true
 vim.opt.mouse:append('a')
 vim.opt.clipboard:append { "unnamed", "unnamedplus" }
 vim.opt.wrap = false
-vim.opt.scrolloff = 25
+vim.opt.scrolloff = 10
 vim.opt.swapfile = false
 
 vim.g.mapleader = ";"
-
--- disable for nvim-tree
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 
 -- load lazy package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
