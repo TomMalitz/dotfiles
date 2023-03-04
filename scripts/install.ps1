@@ -12,7 +12,8 @@ if($isWindows) {
   scoop install neovim
   scoop install ripgrep
   scoop install lazygit
-  scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+  scoop install starship
+  # scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
 }
 elseif($isMacOS) {
   Write-Host "OS detected: macOS"
@@ -21,7 +22,8 @@ elseif($isMacOS) {
   brew install neovim
   brew install ripgrep
   brew install lazygit
-  brew install jandedobbeleer/oh-my-posh/oh-my-posh
+  brew install starship
+  # brew install jandedobbeleer/oh-my-posh/oh-my-posh
 }
 elseif($isLinux) {
   Write-Host "OS detected: Linux"
