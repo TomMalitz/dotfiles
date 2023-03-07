@@ -20,6 +20,7 @@ return {
     cursor_bg = '#c9c97b',
     cursor_fg = '#1c1c1c'
   },
+  window_background_opacity = 1.0,
   window_decorations = "RESIZE",
   window_padding = {
     left = 0,
