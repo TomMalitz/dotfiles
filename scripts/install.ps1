@@ -29,6 +29,7 @@ elseif($isMacOS) {
   Write-Host "OS detected: macOS"
   brew tap wez/wezterm
   brew $brewAction --cask wez/wezterm/wezterm
+  brew $brewAction --cask raycast
   brew $brewAction neovim
   brew $brewAction ripgrep
   brew $brewAction lazygit
