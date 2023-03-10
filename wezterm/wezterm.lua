@@ -40,6 +40,11 @@ return {
       key = 'q',
       mods = 'CMD',
       action = wezterm.action.QuitApplication
+    },
+    {
+      key = '`',
+      mods = 'CTRL',
+      action = wezterm.action.ToggleFullScreen
     }
   },
 }
