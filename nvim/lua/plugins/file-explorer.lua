@@ -29,6 +29,11 @@ return {
   config = function()
     require("nvim-tree").setup({
       sort_by = "case_sensitive",
+      actions = {
+        open_file = {
+          resize_window = false
+        }
+      },
       view = {
         mappings = {
           custom_only = true,
