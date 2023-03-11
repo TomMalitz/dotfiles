@@ -15,22 +15,34 @@ return {
             ["<esc>"] = actions.close
           }
         },
-        wrap_results = true
+        wrap_results = true,
+        layout_config = {
+          width = 0.90
+        }
       },
       pickers = {
         find_files = {
           theme = "dropdown",
-          previewer = false
+          previewer = false,
+          layout_config = {
+            width = 0.8
+          }
         },
         buffers = {
           sort_mru = true,
           sort_lastused = true,
           ignore_current_buffer = true,
           theme = "dropdown",
-          previewer = false
+          previewer = false,
+          layout_config = {
+            width = 0.8
+          }
         },
         live_grep = {
-          theme = "dropdown"
+          theme = "dropdown",
+          layout_config = {
+            width = 0.8
+          }
         }
       },
       extensions = {
