@@ -17,7 +17,7 @@ return {
   font_size = font_size,
   color_scheme = 'Batman',
   colors = {
-    cursor_bg = '#c9c97b',
+    cursor_bg = '#AAAAAA', -- '#c9c97b',
     cursor_fg = '#1c1c1c'
   },
   window_background_opacity = 1.0,
