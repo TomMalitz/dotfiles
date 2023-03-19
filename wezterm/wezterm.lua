@@ -19,7 +19,7 @@ wezterm.on(
     local ps_prefix = '-tabTitle '
     local is_ps_title = string.find(tab.active_pane.title, ps_prefix) 
     if(tab_titles[tab.tab_id] ~= nil and not is_ps_title) then return tab_titles[tab.tab_id]
-    elseif string.find(tab.active_pane.title, ps_prefix) then
+    elseif is_ps_title then
       tab_titles[tab.tab_id] = tab.active_pane.title:gsub(ps_prefix, '')
       wezterm.GLOBAL.tab_titles = tab_titles
       return tab_titles[tab.tab_id]
