@@ -15,17 +15,18 @@ wezterm.on(
     -- handle update for inactive tabs 
     if not tab.is_active then return tab_titles[tab.tab_id] or tab.active_pane.title end
 
-    -- handle update for active tab; only update title if it comes from PS Set-Title function
     local ps_prefix = '-tabTitle '
     local is_ps_title = string.find(tab.active_pane.title, ps_prefix) 
-    if(tab_titles[tab.tab_id] ~= nil and not is_ps_title) then return tab_titles[tab.tab_id]
-    elseif is_ps_title then
+    if(tab_titles[tab.tab_id] ~= nil and not is_ps_title) then return tab_titles[tab.tab_id] end
+    
+    if is_ps_title then
       tab_titles[tab.tab_id] = tab.active_pane.title:gsub(ps_prefix, '')
       wezterm.GLOBAL.tab_titles = tab_titles
       return tab_titles[tab.tab_id]
     else
       return tab.active_pane.title
     end
+
   end
 )
 
