@@ -1,3 +1,4 @@
+local window_width = 0.5
 return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
@@ -22,7 +23,7 @@ return {
           theme = "dropdown",
           previewer = false,
           layout_config = {
-            width = 0.75
+            width = window_width
           }
         },
         buffers = {
@@ -32,13 +33,13 @@ return {
           theme = "dropdown",
           previewer = false,
           layout_config = {
-            width = 0.75
+            width = window_width
           }
         },
         live_grep = {
           theme = "dropdown",
           layout_config = {
-            width = 0.75
+            width = window_width
           }
         }
       },
