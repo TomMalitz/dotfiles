@@ -13,11 +13,11 @@ if os == 'win' then font_size = 10.0 end
 
 return {
   default_prog = startup,
-  font = wezterm.font 'JetBrains Mono',
+  font = wezterm.font('JetBrains Mono', {weight = 'Medium'}),
   font_size = font_size,
   color_scheme = 'Batman',
   colors = {
-    cursor_bg = '#AAAAAA', -- '#c9c97b',
+    cursor_bg = '#d1d1d1', -- '#c9c97b',
     cursor_fg = '#1c1c1c'
   },
   window_background_opacity = 1.0,
@@ -45,6 +45,16 @@ return {
       key = '`',
       mods = 'CTRL',
       action = wezterm.action.ToggleFullScreen
+    },
+    {
+      key = '[',
+      mods = 'CTRL',
+      action = wezterm.action.IncreaseFontSize
+    },
+    {
+      key = ']',
+      mods = 'CTRL',
+      action = wezterm.action.DecreaseFontSize
     }
   },
 }

@@ -16,16 +16,13 @@ return {
           }
         },
         wrap_results = true,
-        layout_config = {
-          width = 0.90
-        }
       },
       pickers = {
         find_files = {
           theme = "dropdown",
           previewer = false,
           layout_config = {
-            width = 0.8
+            width = 0.75
           }
         },
         buffers = {
@@ -35,13 +32,13 @@ return {
           theme = "dropdown",
           previewer = false,
           layout_config = {
-            width = 0.8
+            width = 0.75
           }
         },
         live_grep = {
           theme = "dropdown",
           layout_config = {
-            width = 0.8
+            width = 0.75
           }
         }
       },
