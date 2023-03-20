@@ -1,8 +1,35 @@
 local wezterm = require 'wezterm'
+wezterm.log_info 'Startup'
 
 local function get_os()
     return package.config:sub(1,1) == "\\" and "win" or "unix"
 end
+
+-- function to handle custom naming of tabs via PS Set-Title command
+wezterm.GLOBAL.tab_titles = wezterm.GLOBAL.tab_titles or {}
+wezterm.on(
+  'format-tab-title',
+  function(tab, tabs, panes, config, hover, max_width)
+    local tab_titles = wezterm.GLOBAL.tab_titles
+
+    -- handle update for inactive tabs 
+    if not tab.is_active then return tab_titles[tab.tab_id] or tab.active_pane.title end
+
+    local ps_prefix = '-tabTitle '
+    local is_ps_title = string.find(tab.active_pane.title, ps_prefix) 
+    if(tab_titles[tab.tab_id] ~= nil and not is_ps_title) then return tab_titles[tab.tab_id] end
+    
+    if is_ps_title then
+      tab_titles[tab.tab_id] = tab.active_pane.title:gsub(ps_prefix, '')
+      wezterm.GLOBAL.tab_titles = tab_titles
+      return tab_titles[tab.tab_id]
+    else
+      return tab.active_pane.title
+    end
+
+  end
+)
+
 
 local os = get_os()
 local startup = { '/bin/zsh', '--login', '-c', 'pwsh'}

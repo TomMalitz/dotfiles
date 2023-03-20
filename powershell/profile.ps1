@@ -16,3 +16,10 @@ Invoke-Expression (&starship init powershell)
 Import-Module Terminal-Icons
 Import-Module PSFzf
 
+# Function to rename the title of the powershell window
+function Set-Title {
+  Param($Title)
+  $Prefix = "-tabTitle "
+  $host.ui.RawUI.WindowTitle = $Prefix+$Title
+}
+
