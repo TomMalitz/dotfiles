@@ -1,0 +1,44 @@
+set relativenumber
+set hlsearch
+set smartcase
+set scrolloff=10
+set sidescrolloff=10
+" enable system clipboard
+set clipboard=unnamedplus,unnamed,ideaput
+
+" plugins
+Plug 'terryma/vim-multiple-cursors'
+" map next, prev, and skip for multi-cursor
+map <C-n> <A-n>
+map <C-p> <A-p>
+map <C-x> <A-x>
+
+Plug 'tpope/vim-commentary'
+
+" keymaps
+let mapleader = ';'
+
+inoremap jk <Esc> 
+
+" center after vertical jumps
+nnoremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
+
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+
+nnoremap fb :action RecentFiles<CR>
+nnoremap ff :action SearchEverywhere<CR>
+nnoremap fg :action FindInPath<CR>
+
+nmap gr :action ShowUsages<CR>
+nmap gd :action GotoDeclaration<CR>
+nmap gi :action GotoImplementation<CR>
+nmap gs :action GotoSuperMethod<CR>
+
+nmap <leader>rr :action RenameElement<CR>
+nmap <leader>rg :action Generate<CR>
+nmap <leader>f :action ReformatCode<CR>
+
+" clear search buffer
+nmap <Esc><Esc> :let @/ = ""<CR>
