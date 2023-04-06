@@ -42,6 +42,7 @@ return {
   default_prog = startup,
   font = wezterm.font('JetBrains Mono', {weight = 'Medium'}),
   font_size = font_size,
+  line_height = 1.05,
   color_scheme = 'Batman',
   colors = {
     cursor_bg = '#d1d1d1', -- '#c9c97b',
