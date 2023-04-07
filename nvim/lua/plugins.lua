@@ -1,5 +1,5 @@
 return {
   'nvim-lua/plenary.nvim',
-  'vim-airline/vim-airline',
+  {'nvim-lualine/lualine.nvim', config = true},
   'tpope/vim-fugitive'
 }
