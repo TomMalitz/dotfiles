@@ -43,11 +43,14 @@ if os == 'win' then startup = { 'powershell.exe', 'pwsh'} end
 local font_size = 12.0
 if os == 'win' then font_size = 10.0 end
 
+local line_height = 1
+if os == 'unix' then line_height = 1.05 end
+
 return {
   default_prog = startup,
   font = wezterm.font('JetBrains Mono', {weight = 'Medium'}),
   font_size = font_size,
-  line_height = 1.05,
+  line_height = line_height,
   color_scheme = 'Batman',
   colors = {
     background = '#282828',
