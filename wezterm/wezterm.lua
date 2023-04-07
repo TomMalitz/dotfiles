@@ -45,10 +45,11 @@ return {
   line_height = 1.05,
   color_scheme = 'Batman',
   colors = {
+    background = '#282828',
     cursor_bg = '#d1d1d1', -- '#c9c97b',
     cursor_fg = '#1c1c1c'
   },
-  window_background_opacity = 1.0,
+  window_background_opacity = 0.98,
   window_decorations = "RESIZE",
   window_padding = {
     left = 0,
