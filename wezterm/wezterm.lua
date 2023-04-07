@@ -6,30 +6,35 @@ local function get_os()
 end
 
 -- function to handle custom naming of tabs via PS Set-Title command
-wezterm.GLOBAL.tab_titles = wezterm.GLOBAL.tab_titles or {}
+local tabTitles = {}
+for i=1, 100 do
+  tabTitles[i] = i
+end
+wezterm.GLOBAL.tab_titles = wezterm.GLOBAL.tab_titles or tabTitles
 wezterm.on(
   'format-tab-title',
   function(tab, tabs, panes, config, hover, max_width)
     local tab_titles = wezterm.GLOBAL.tab_titles
+    local tabIndex = tab.tab_id + 1 
 
     -- handle update for inactive tabs 
-    if not tab.is_active then return tab_titles[tab.tab_id] or tab.active_pane.title end
+    if not tab.is_active then return tab_titles[tabIndex] or tab.active_pane.title end
 
     local ps_prefix = '-tabTitle '
     local is_ps_title = string.find(tab.active_pane.title, ps_prefix) 
-    if(tab_titles[tab.tab_id] ~= nil and not is_ps_title) then return tab_titles[tab.tab_id] end
+    if(tab_titles[tabIndex] ~= nil and not is_ps_title) then return tab_titles[tabIndex] end
     
     if is_ps_title then
-      tab_titles[tab.tab_id] = tab.active_pane.title:gsub(ps_prefix, '')
+      wezterm.log_info 'Active'
+      wezterm.log_info(tab.active_pane.title)
+      tab_titles[tabIndex] = tab.active_pane.title:gsub(ps_prefix, '')
       wezterm.GLOBAL.tab_titles = tab_titles
-      return tab_titles[tab.tab_id]
+      return tab_titles[tabIndex]
     else
       return tab.active_pane.title
     end
-
   end
 )
-
 
 local os = get_os()
 local startup = { '/bin/zsh', '--login', '-c', 'pwsh'}
