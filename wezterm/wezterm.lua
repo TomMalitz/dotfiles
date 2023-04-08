@@ -8,7 +8,7 @@ end
 -- function to handle custom naming of tabs via PS Set-Title command
 local tabTitles = {}
 for i=1, 100 do
-  tabTitles[i] = i
+  tabTitles[i] = 'new'
 end
 wezterm.GLOBAL.tab_titles = wezterm.GLOBAL.tab_titles or tabTitles
 wezterm.on(
@@ -41,14 +41,17 @@ local startup = { '/bin/zsh', '--login', '-c', 'pwsh'}
 if os == 'win' then startup = { 'powershell.exe', 'pwsh'} end
 
 local font_size = 12.0
-if os == 'win' then font_size = 10.0 end
-
-local line_height = 1
-if os == 'unix' then line_height = 1.05 end
+local font_weight = 'Medium'
+local line_height = 1.05
+if os == 'win' then 
+  font_size = 10.0
+  font_weight = 'Regular'
+  line_height = 1 
+end
 
 return {
   default_prog = startup,
-  font = wezterm.font('JetBrains Mono', {weight = 'Medium'}),
+  font = wezterm.font('JetBrains Mono', {weight = 'Regular'}),
   font_size = font_size,
   line_height = line_height,
   color_scheme = 'Batman',
