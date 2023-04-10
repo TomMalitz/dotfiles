@@ -48,6 +48,10 @@ return {
       -- LSP Support
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
+      
+      -- Snippets
+      {'L3MON4D3/LuaSnip'},
+      {'saadparwaiz1/cmp_luasnip'},
 
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},
@@ -60,6 +64,11 @@ return {
       -- completion setup
       local cmp = require('cmp')
       cmp.setup ({
+        snippet = {
+          expand = function(args)
+            require('luasnip').lsp_expand(args.body)
+          end,
+        },
         sources = {
           { name = 'nvim_lsp' },
           { name = 'buffer' },
