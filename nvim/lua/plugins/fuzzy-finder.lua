@@ -16,7 +16,7 @@ return {
             ["<esc>"] = actions.close
           }
         },
-        wrap_results = true,
+        wrap_results = false,
       },
       pickers = {
         find_files = {
@@ -37,9 +37,9 @@ return {
           }
         },
         live_grep = {
-          theme = "dropdown",
+          -- theme = "dropdown",
           layout_config = {
-            width = window_width
+            width = 0.75
           }
         }
       },
