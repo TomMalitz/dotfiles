@@ -7,36 +7,40 @@ $greenCheck = @{
 # install dependencies by default
 # pass -update or -u to upgrade dependencies
 $isUpdate = ($args[0] -eq "-update") -or ($args[0] -eq "-u")
-$scoopAction = "scoop install"
-$brewAction = "brew install"
+$scoopAction = "install"
+$brewAction = "install"
 if($isUpdate) { 
-  $scoopAction = "scoop update" 
-  $brewAction = "brew upgrade" 
+  $scoopAction = "update" 
+  $brewAction = "upgrade" 
 }
+
+# common dependencies
+$dependencies = @(
+  "neovim",
+  "fd",
+  "ripgrep",
+  "zoxide",
+  "lazygit",
+  "starship"
+)
 
 Write-Host "installing dependencies..."
 if($isWindows) {
   Write-Host "OS detected: Windows"
   scoop bucket add extras
-  $scoopAction wezterm
-  $scoopAction neovim
-  $scoopAction fd
-  $scoopAction ripgrep
-  $scoopAction lazygit
-  $scoopAction starship
-  # scoop $scoopAction https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+  scoop $scoopAction wezterm
+  foreach($dependency in $dependencies) {
+    scoop $scoopAction $dependency
+  }
 }
 elseif($isMacOS) {
   Write-Host "OS detected: macOS"
   brew tap wez/wezterm
-  $brewAction --cask wez/wezterm/wezterm
-  $brewAction --cask raycast
-  $brewAction neovim
-  $brewAction fd
-  $brewAction ripgrep
-  $brewAction lazygit
-  $brewAction starship
-  # brew $brewAction jandedobbeleer/oh-my-posh/oh-my-posh
+  brew $brewAction --cask wez/wezterm/wezterm
+  brew $brewAction --cask raycast
+  foreach($dependency in $dependencies) {
+    brew $brewAction $dependency
+  }
 }
 elseif($isLinux) {
   Write-Host "OS detected: Linux"
