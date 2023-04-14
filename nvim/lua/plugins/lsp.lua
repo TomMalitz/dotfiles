@@ -1,24 +1,18 @@
 return {
   {
-    'neovim/nvim-lspconfig',
+    'hrsh7th/nvim-cmp',
+    event = 'InsertEnter',
     dependencies = {
-      -- LSP Support
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
-      
-      -- Snippets
+      -- snippets
       {'L3MON4D3/LuaSnip'},
       {'saadparwaiz1/cmp_luasnip'},
 
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
+      -- completions
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-path'}
     },
     config = function()
-
-      -- completion setup
       local cmp = require('cmp')
       cmp.setup ({
         snippet = {
@@ -47,7 +41,16 @@ return {
           ['<C-u>'] = cmp.mapping.scroll_docs(-4),
         }
       })
-
+    end
+  },
+  {
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      -- lsp installer/configs
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
+    },
+    config = function()
       -- mason lsp installer
       require('mason').setup()
       require('mason-lspconfig').setup({
@@ -78,7 +81,6 @@ return {
         -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
         -- vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
       end
-
 
       -- server configuration
       local lspconfig = require('lspconfig')
@@ -119,5 +121,5 @@ return {
 
     end
   },
-  {'mfussenegger/nvim-jdtls'}
+  {'mfussenegger/nvim-jdtls', ft = 'java'}
 }
