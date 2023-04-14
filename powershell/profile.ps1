@@ -3,20 +3,20 @@ Set-Alias vim nvim
 Set-Alias ll dir
 Set-Alias g git
 
+# Starship
 Invoke-Expression (&starship init powershell)
 
-# Oh My Posh Config
-# if($isWindows) {
-#   oh-my-posh init pwsh --config '~/Documents/PowerShell/posh.json' | Invoke-Expression
-# } else {
-#   oh-my-posh init pwsh --config '~/.config/powershell/posh.json' | Invoke-Expression
-# }
+# Zoxide
+Invoke-Expression (& {
+    $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
+    (zoxide init --cmd cd --hook $hook powershell | Out-String)
+})
 
 # PowerShell Modules
 Import-Module Terminal-Icons
 Import-Module PSFzf
 
-# Function to rename the title of the powershell window
+# Ability to rename the title of the powershell window
 function Set-Title {
   Param($Title)
   $Prefix = "-tabTitle "
