@@ -25,8 +25,6 @@ wezterm.on(
     if(tab_titles[tabIndex] ~= nil and not is_ps_title) then return tab_titles[tabIndex] end
     
     if is_ps_title then
-      wezterm.log_info 'Active'
-      wezterm.log_info(tab.active_pane.title)
       tab_titles[tabIndex] = tab.active_pane.title:gsub(ps_prefix, '')
       wezterm.GLOBAL.tab_titles = tab_titles
       return tab_titles[tabIndex]
