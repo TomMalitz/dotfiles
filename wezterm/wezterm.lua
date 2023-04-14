@@ -49,7 +49,7 @@ end
 
 return {
   default_prog = startup,
-  font = wezterm.font('JetBrains Mono', {weight = 'Regular'}),
+  font = wezterm.font('JetBrains Mono', {weight = font_weight}),
   font_size = font_size,
   line_height = line_height,
   color_scheme = 'Batman',
