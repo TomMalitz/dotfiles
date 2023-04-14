@@ -52,7 +52,6 @@ return {
         }
       }
     }
-    -- require('telescope').load_extension('fzf')
 
     local builtin = require('telescope.builtin')
     vim.keymap.set('n', 'ff', builtin.find_files, {})
