@@ -1,7 +1,9 @@
 return {
   'iamcco/markdown-preview.nvim',
-  lazy = false,
-  build = "cd app && yarn install",
+  ft = "markdown",
+  build = function()
+    vim.fn["mkdp#util#install"]()
+  end,
   keys = {
     {"<leader>mp", "<cmd>MarkdownPreview<cr>"}
   }
