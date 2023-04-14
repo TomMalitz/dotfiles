@@ -12,9 +12,11 @@ return {
       },
       merge_keywords = false
     },
+    config = true
   },
   { 
     "danymat/neogen", 
+    lazy = true,
     dependencies = "nvim-treesitter/nvim-treesitter", 
     keys = {
       {'<leader>dg', '<cmd>Neogen<cr>'}
