@@ -38,6 +38,7 @@ elseif($isMacOS) {
   brew tap wez/wezterm
   brew $brewAction --cask wez/wezterm/wezterm
   brew $brewAction --cask raycast
+  brew $brewAction --cask alt-tab
   foreach($dependency in $dependencies) {
     brew $brewAction $dependency
   }
