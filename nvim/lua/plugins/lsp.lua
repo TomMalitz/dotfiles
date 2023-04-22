@@ -46,11 +46,15 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
+      {'folke/neoconf.nvim'},
       -- lsp installer/configs
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
     },
     config = function()
+
+      require('neoconf').setup()
+
       -- mason lsp installer
       require('mason').setup()
       require('mason-lspconfig').setup({
@@ -86,10 +90,19 @@ return {
       local lspconfig = require('lspconfig')
       require('mason-lspconfig').setup_handlers({
         function(server_name)
-          lspconfig[server_name].setup({
+          local server_config = {
             on_attach = lsp_attach,
             capabilities = lsp_capabilities
-          })
+          }
+          -- look at neoconf in project for disabled servers
+          if require('neoconf').get(server_name .. '.disable') then
+            return
+          end
+          -- for volar, enable takeover mode
+          if server_name == 'volar' then
+            server_config.filetypes = { 'vue', 'typescript', 'javascript'} 
+          end
+          lspconfig[server_name].setup(server_config)
         end
       })
 
