@@ -22,7 +22,7 @@ inoremap jk <Esc>
 
 " center after vertical jumps
 nnoremap <C-d> <C-d>zz
-noremap <C-u> <C-u>zz
+nnoremap <C-u> <C-u>zz
 
 nnoremap <C-o> :action Back<CR>
 nnoremap <C-i> :action Forward<CR>
