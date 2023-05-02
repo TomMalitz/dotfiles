@@ -1,5 +1,6 @@
 vim.wo.number = true
 vim.opt.relativenumber = true
+vim.opt.fillchars = { eob = ' ' }
 vim.opt.autoindent = true
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
