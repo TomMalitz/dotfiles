@@ -67,6 +67,20 @@ local monokai = {
   end
 } 
 
-local active_theme = gruvbox
+local vscode = {
+  "Mofiqul/vscode.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    local vscode_theme = require('vscode')
+    vscode_theme.setup({
+      transparent = true,
+      -- disable_nvimtree_bg = true
+    })
+    vscode_theme.load()
+  end
+} 
+
+local active_theme = vscode
 
 return active_theme
