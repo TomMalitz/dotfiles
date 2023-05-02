@@ -42,19 +42,22 @@ local font_size = 12.0
 local font_weight = 'Medium'
 local line_height = 1.05
 if os == 'win' then 
-  font_size = 10.0
+  font_size = 9.0
   font_weight = 'Regular'
   line_height = 1 
 end
+
+local background = '#282828'
+local dark_background = '#1e1e1e'
 
 return {
   default_prog = startup,
   font = wezterm.font('JetBrains Mono', {weight = font_weight}),
   font_size = font_size,
   line_height = line_height,
-  color_scheme = 'Batman',
+  color_scheme = 'VSCodeDark+ (Gogh)',
   colors = {
-    background = '#282828',
+    background = dark_background,
     cursor_bg = '#d1d1d1', -- '#c9c97b',
     cursor_fg = '#1c1c1c'
   },
