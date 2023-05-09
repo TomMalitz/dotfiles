@@ -48,6 +48,10 @@
             "commands": ["workbench.action.splitEditor"]
         },
         {
+            "before": ["<leader>", "z"],
+            "commands": ["workbench.action.toggleZenMode"]
+        },
+        {
             "before": ["<space>"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
         },
