@@ -1,3 +1,4 @@
+// custom settings for visual studio code
 {
     //workbench settings
     "workbench.editor.showTabs": false,
