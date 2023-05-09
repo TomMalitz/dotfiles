@@ -16,5 +16,15 @@
     {
         "key": "ctrl+n",
         "command": "editor.action.addSelectionToNextFindMatch"
+    },
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when":"focusedView == workbench.explorer.fileView"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when":"focusedView == workbench.explorer.fileView"
     }
 ]
