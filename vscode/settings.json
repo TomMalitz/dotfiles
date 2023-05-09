@@ -1,0 +1,70 @@
+{
+    //workbench settings
+    "workbench.editor.showTabs": false,
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#4eccb2",
+        "editorCursor.background": "#000",
+        "terminalCursor.foreground": "#4eccb2",
+        "terminalCursor.background": "#000"
+    },
+
+    // editor settings 
+    "editor.codeActionsOnSave": {
+
+    },
+    "editor.fontSize": 12,
+    "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+    "editor.codeLens": false,
+    "editor.lineNumbers": "relative",
+
+    // volar settings
+    "volar.codeLens.references": false,
+
+    // vim settings 
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.leader": ";",
+    "vim.handleKeys": {
+        "<C-f>": true,
+        "<C-j>": false
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "s"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.splitEditor"]
+        },
+        {
+            "before": ["<space>"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["f", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["f", "g"],
+            "commands": ["workbench.view.search"]
+        },
+        {
+            "before": ["<leader>", "g"],
+            "commands": ["workbench.view.scm"]
+        },
+        {
+            "before": ["g", "l"],
+            "commands": ["editor.action.showHover"]
+        }
+    ]
+}

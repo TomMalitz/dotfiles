@@ -1,0 +1,19 @@
+[
+    {
+        "key": "ctrl+f",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.view.search"
+    },
+    {
+        "key": "space",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when":"focusedView == workbench.explorer.fileView"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.addSelectionToNextFindMatch"
+    }
+]
