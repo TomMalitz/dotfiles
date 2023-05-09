@@ -16,7 +16,14 @@
     "editor.fontSize": 12,
     "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
     "editor.codeLens": false,
-    "editor.lineNumbers": "relative",
+
+    //terminal settings
+    "terminal.integrated.profiles.windows": {
+        "pw-7": {
+            "path": "c:/Program Files/PowerShell/7/pwsh.exe"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "pw-7",   "editor.lineNumbers": "relative",
 
     // volar settings
     "volar.codeLens.references": false,
