@@ -19,7 +19,9 @@ if($isWindows) {
   Write-Host "syncing settings and keybinding files"
   Copy-Item "../vscode/keybindings.json" -Destination "~/AppData/Roaming/Code/User/keybindings.json" -Force
   Copy-Item "../vscode/settings.json" -Destination "~/AppData/Roaming/Code/User/settings.json" -Force
+  Copy-Item "../vscode/.vsvimrc" -Destination "~/.vsvimrc" -Force
 }
 
 Write-Host "Done " -NoNewLine
 Write-Host @greenCheck
+
