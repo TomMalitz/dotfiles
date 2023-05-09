@@ -26,5 +26,10 @@
         "key": "d",
         "command": "deleteFile",
         "when":"focusedView == workbench.explorer.fileView"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when":"focusedView == workbench.explorer.fileView"
     }
 ]
