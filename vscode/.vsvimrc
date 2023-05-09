@@ -1,0 +1,32 @@
+" Visual Stuido rc file for VsVim extension
+set relativenumber
+set nu rnu
+set autoindent
+let mapleader=";"
+
+" jk to exit insert move
+" :inoremap kj <Esc>
+inoremap jk <Esc>
+" clear current search buffer
+nmap <Esc><Esc> :let @/ = ""<CR>
+
+nmap R :vsc Refactor.Rename<CR>
+
+nmap <C-O> :vsc View.NavigateBackward<CR>
+nmap <C-I> :vsc View.NavigateForward<CR>
+
+map gi :vsc Edit.GoToImplementation<CR>
+map gd :vsc Edit.GoToDefinition<CR>
+map gp :vsc Edit.PeekDefinition<CR>
+map gr :vsc Edit.FindAllReferences<CR>
+map gl :vsc Edit.QuickInfo<CR>
+
+map ff :vsc Edit.NavigateTo<CR>
+map fb :vsc Window.NextDocumentWindowNav<CR>
+map fg :vsc Edit.FindInFiles<CR>
+
+nnoremap gk gt
+nnoremap gj gT
+
+" save with \s enter
+noremap <Leader>s :update<CR>
