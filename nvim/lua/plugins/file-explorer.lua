@@ -24,8 +24,8 @@ return {
     'nvim-tree/nvim-web-devicons'
   },
   keys = {
-    -- {'<C-f>', '<cmd>NvimTreeFocus<cr>'},
-    {'<C-f>', '<cmd>NvimTreeToggle<cr>'},
+    {'<C-f>', '<cmd>NvimTreeFocus<cr>'},
+    {'<Space>', '<cmd>NvimTreeToggle<cr>'},
   },
   config = function()
     local function on_attach(bufnr)
