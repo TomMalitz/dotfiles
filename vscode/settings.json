@@ -16,6 +16,7 @@
     "editor.fontSize": 12,
     "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
     "editor.codeLens": false,
+    "editor.minimap.enabled": false,
 
     //terminal settings
     "terminal.integrated.profiles.windows": {
