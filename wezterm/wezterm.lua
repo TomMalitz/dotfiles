@@ -62,7 +62,7 @@ return {
     cursor_fg = '#1c1c1c'
   },
   window_background_opacity = 0.98,
-  window_decorations = "RESIZE",
+  -- window_decorations = "RESIZE",
   window_padding = {
     left = 0,
     right = 0,
