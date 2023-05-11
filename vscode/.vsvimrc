@@ -19,7 +19,7 @@ map gi :vsc Edit.GoToImplementation<CR>
 map gd :vsc Edit.GoToDefinition<CR>
 map gp :vsc Edit.PeekDefinition<CR>
 map gr :vsc Edit.FindAllReferences<CR>
-map gl :vsc Edit.QuickInfo<CR>
+map K :vsc Edit.QuickInfo<CR>
 
 map ff :vsc Edit.NavigateTo<CR>
 map fb :vsc Window.NextDocumentWindowNav<CR>

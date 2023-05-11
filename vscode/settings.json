@@ -81,7 +81,7 @@
             "commands": ["workbench.view.scm"]
         },
         {
-            "before": ["g", "l"],
+            "before": ["K"],
             "commands": ["editor.action.showHover"]
         }
     ]
