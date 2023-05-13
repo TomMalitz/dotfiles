@@ -18,6 +18,9 @@
         "terminalCursor.background": "#000"
     },
 
+    // source control settings
+    "scm.diffDecorations": "none",
+
     // editor settings 
     "editor.codeActionsOnSave": {
 
@@ -56,6 +59,10 @@
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Esc>", "<Esc>"],
+            "commands": [":nohl"]
+        },
         {
             "before": ["<leader>", "s"],
             "commands": ["workbench.action.files.save"]
