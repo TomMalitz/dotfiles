@@ -1,11 +1,15 @@
 // custom settings for visual studio code
 {
+    // window settings
+    "window.menuBarVisibility": "compact",
+
     // extension settings
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
-    },
+    }, 
 
     //workbench settings
+    "workbench.layoutControl.enabled": false,
     "workbench.editor.showTabs": false,
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#4eccb2",
