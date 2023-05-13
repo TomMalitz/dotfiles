@@ -87,6 +87,10 @@
         {
             "before": ["K"],
             "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["g", "i"],
+            "commands": ["editor.action.goToImplementation"]
         }
     ]
 }
