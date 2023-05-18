@@ -1,14 +1,10 @@
-// custom settings for visual studio code
 {
-    // window settings
     "window.menuBarVisibility": "compact",
 
-    // extension settings
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     }, 
 
-    //workbench settings
     "workbench.layoutControl.enabled": false,
     "workbench.editor.showTabs": false,
     "workbench.colorCustomizations": {
@@ -18,30 +14,27 @@
         "terminalCursor.background": "#000"
     },
 
-    // source control settings
     "scm.diffDecorations": "none",
 
-    // editor settings 
     "editor.codeActionsOnSave": {
 
     },
+    "editor.lineNumbers": "relative",
     "editor.fontSize": 12,
     "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
     "editor.codeLens": false,
     "editor.minimap.enabled": false,
 
-    //terminal settings
     "terminal.integrated.profiles.windows": {
         "pw-7": {
             "path": "c:/Program Files/PowerShell/7/pwsh.exe"
         }
     },
-    "terminal.integrated.defaultProfile.windows": "pw-7",   "editor.lineNumbers": "relative",
+    "terminal.integrated.defaultProfile.windows": "pw-7",
+    "terminal.integrated.fontSize": 12,
 
-    // volar settings
     "volar.codeLens.references": false,
 
-    // vim settings 
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -76,6 +69,14 @@
             "commands": ["workbench.action.toggleZenMode"]
         },
         {
+            "before": ["<leader>", "f"],
+            "commands": ["editor.action.format"]
+        },
+        {
+            "before": ["<leader>", "g"],
+            "commands": ["workbench.view.scm"]
+        },
+        {
             "before": ["<space>"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
         },
@@ -86,10 +87,6 @@
         {
             "before": ["f", "g"],
             "commands": ["workbench.view.search"]
-        },
-        {
-            "before": ["<leader>", "g"],
-            "commands": ["workbench.view.scm"]
         },
         {
             "before": ["K"],
