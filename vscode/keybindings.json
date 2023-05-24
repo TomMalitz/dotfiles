@@ -39,5 +39,10 @@
         "key": "enter",
         "command": "explorer.openAndPassFocus",
         "when": "focusedView == workbench.explorer.fileView"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "focusedView == workbench.explorer.fileView && explorerResourceIsFolder"
     }
 ]
