@@ -34,5 +34,10 @@
         "key": "r",
         "command": "renameFile",
         "when":"focusedView == workbench.explorer.fileView"
+    },
+    {
+        "key": "enter",
+        "command": "explorer.openAndPassFocus",
+        "when": "focusedView == workbench.explorer.fileView"
     }
 ]
