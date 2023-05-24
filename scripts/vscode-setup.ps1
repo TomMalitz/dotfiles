@@ -15,10 +15,18 @@ foreach($extension in $extensions) {
 }
 
 # sync settings and keybindings files
+Write-Host "syncing settings and keybinding files"
 if($isWindows) {
-  Write-Host "syncing settings and keybinding files"
+  Write-Host "Windows OS detected"
   Copy-Item "../vscode/keybindings.json" -Destination "~/AppData/Roaming/Code/User/keybindings.json" -Force
   Copy-Item "../vscode/settings.json" -Destination "~/AppData/Roaming/Code/User/settings.json" -Force
+  Copy-Item "../vscode/.vsvimrc" -Destination "~/.vsvimrc" -Force
+}
+
+if($isMacOS) {
+  Write-Host "Mac OS detected"
+  Copy-Item "../vscode/keybindings.json" -Destination "~/Library/Application Support/Code/User/keybindings.json" -Force
+  Copy-Item "../vscode/settings.json" -Destination "~/Library/Application Support/Code/User/settings.json" -Force
   Copy-Item "../vscode/.vsvimrc" -Destination "~/.vsvimrc" -Force
 }
 
