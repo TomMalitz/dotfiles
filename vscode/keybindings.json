@@ -14,7 +14,7 @@
     {
         "key": "space",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when":"focusedView == workbench.explorer.fileView"
+        "when": "focusedView == workbench.explorer.fileView"
     },
     {
         "key": "ctrl+n",
@@ -23,26 +23,26 @@
     {
         "key": "a",
         "command": "explorer.newFile",
-        "when":"focusedView == workbench.explorer.fileView"
+        "when": "focusedView == workbench.explorer.fileView && !inputFocus"
     },
     {
         "key": "d",
         "command": "deleteFile",
-        "when":"focusedView == workbench.explorer.fileView"
+        "when": "focusedView == workbench.explorer.fileView && !inputFocus"
     },
     {
         "key": "r",
         "command": "renameFile",
-        "when":"focusedView == workbench.explorer.fileView"
+        "when": "focusedView == workbench.explorer.fileView && !inputFocus"
     },
     {
         "key": "enter",
         "command": "explorer.openAndPassFocus",
-        "when": "focusedView == workbench.explorer.fileView"
+        "when": "focusedView == workbench.explorer.fileView && !inputFocus"
     },
     {
         "key": "enter",
         "command": "list.select",
-        "when": "focusedView == workbench.explorer.fileView && explorerResourceIsFolder"
+        "when": "focusedView == workbench.explorer.fileView && explorerResourceIsFolder && !inputFocus"
     }
 ]
