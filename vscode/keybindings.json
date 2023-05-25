@@ -8,6 +8,14 @@
         "command": "workbench.view.search"
     },
     {
+        "key": "ctrl+x",
+        "command": "workbench.view.extensions"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "workbench.view.debug"
+    },
+    {
         "key": "ctrl+j",
         "command": "workbench.action.togglePanel"
     },
