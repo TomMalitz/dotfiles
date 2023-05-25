@@ -7,6 +7,7 @@ $greenCheck = @{
 $extensions = @(
   "vue.volar",
   "vscodevim.vim"
+  "donjayamanne.githistory"
 )
 
 # install vscode extensions
