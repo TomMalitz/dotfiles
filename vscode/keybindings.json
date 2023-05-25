@@ -12,7 +12,7 @@
         "command": "workbench.view.extensions"
     },
     {
-        "key": "ctrl+r",
+        "key": "ctrl+i",
         "command": "workbench.view.debug"
     },
     {
