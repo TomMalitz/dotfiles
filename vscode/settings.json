@@ -21,6 +21,7 @@
 
     },
     "editor.lineNumbers": "relative",
+    "editor.occurrencesHighlight": false,
     "editor.fontSize": 12,
     "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
     "editor.codeLens": false,
