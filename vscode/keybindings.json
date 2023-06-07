@@ -25,6 +25,11 @@
         "when": "focusedView == workbench.explorer.fileView"
     },
     {
+        "key": "x",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when":"focusedView == workbench.explorer.fileView"
+    },
+    {
         "key": "ctrl+n",
         "command": "editor.action.addSelectionToNextFindMatch"
     },
