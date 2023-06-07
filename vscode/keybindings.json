@@ -27,7 +27,7 @@
     {
         "key": "x",
         "command": "workbench.files.action.collapseExplorerFolders",
-        "when":"focusedView == workbench.explorer.fileView"
+        "when":"focusedView == workbench.explorer.fileView && !inputFocus"
     },
     {
         "key": "ctrl+n",
