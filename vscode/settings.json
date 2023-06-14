@@ -96,10 +96,6 @@
             "commands": ["workbench.view.scm"]
         },
         {
-            "before": ["<space>"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
-        },
-        {
             "before": ["f", "f"],
             "commands": ["workbench.action.quickOpen"]
         },
