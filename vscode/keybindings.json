@@ -85,5 +85,10 @@
         "key": "enter",
         "command": "list.select",
         "when": "filesExplorerFocus && explorerResourceIsFolder && !inputFocus"
+    },
+    {
+        "key": "tab",
+        "command": "search.action.focusSearchList",
+        "when": "sideBarFocus && activeViewlet == 'workbench.view.search'"
     }
 ]
