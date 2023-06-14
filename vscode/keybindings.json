@@ -10,6 +10,11 @@
         "when": "terminalFocus"
     },
     {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
         "key": "ctrl+v",
         "command": "workbench.action.nextPanelView",
         "when": "panelFocus"
