@@ -5,6 +5,7 @@
         "vscodevim.vim": 1
     }, 
 
+    "workbench.colorTheme": "JetBrains Rider Dark Theme",
     "workbench.layoutControl.enabled": false,
     "workbench.activityBar.visible": false,
     "workbench.editor.showTabs": false,
@@ -85,6 +86,10 @@
         {
             "before": ["f", "f"],
             "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["f", "b"],
+            "commands": ["workbench.view.search"]
         },
         {
             "before": ["f", "g"],
