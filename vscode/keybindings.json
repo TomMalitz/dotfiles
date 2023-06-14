@@ -1,5 +1,15 @@
 [
     {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
         "key": "ctrl+f",
         "command": "workbench.view.explorer"
     },
@@ -25,13 +35,9 @@
         "when": "focusedView == workbench.explorer.fileView"
     },
     {
-        "key": "x",
-        "command": "workbench.files.action.collapseExplorerFolders",
-        "when":"focusedView == workbench.explorer.fileView && !inputFocus"
-    },
-    {
         "key": "ctrl+n",
-        "command": "editor.action.addSelectionToNextFindMatch"
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
     },
     {
         "key": "a",
