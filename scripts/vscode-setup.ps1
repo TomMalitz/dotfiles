@@ -8,6 +8,7 @@ $extensions = @(
   "vue.volar",
   "vscodevim.vim"
   "donjayamanne.githistory"
+  "edwinsulaiman.jetbrains-rider-dark-theme"
 )
 
 # install vscode extensions
