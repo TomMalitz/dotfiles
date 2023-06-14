@@ -10,6 +10,11 @@
         "when": "terminalFocus"
     },
     {
+        "key": "ctrl+v",
+        "command": "workbench.action.nextPanelView",
+        "when": "panelFocus"
+    },
+    {
         "key": "ctrl+f",
         "command": "workbench.view.explorer"
     },
@@ -23,11 +28,18 @@
     },
     {
         "key": "ctrl+b",
-        "command": "workbench.view.debug"
+        "command": "workbench.view.debug",
+        "when": "editorFocus || sideBarFocus"
     },
     {
         "key": "ctrl+j",
-        "command": "workbench.action.togglePanel"
+        "command": "workbench.action.terminal.focus",
+        "when": "!panelFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.togglePanel",
+        "when": "panelFocus"
     },
     {
         "key": "space",
@@ -54,10 +66,10 @@
         "command": "renameFile",
         "when": "focusedView == workbench.explorer.fileView && !inputFocus"
     },
-        {
+    {
         "key": "x",
         "command": "workbench.files.action.collapseExplorerFolders",
-        "when":"focusedView == workbench.explorer.fileView && !inputFocus"
+        "when": "focusedView == workbench.explorer.fileView && !inputFocus"
     },
     {
         "key": "enter",
