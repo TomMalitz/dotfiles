@@ -53,7 +53,7 @@
     {
         "key": "space",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when": "!editorFocus"
+        "when": "filesExplorerFocus"
     },
     {
         "key": "a",
