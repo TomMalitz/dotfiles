@@ -1,3 +1,8 @@
+{
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "workbench.colorTheme": "JetBrains Rider Dark Theme",
   "workbench.layoutControl.enabled": false,
   "workbench.activityBar.visible": false,
   "workbench.editor.showTabs": false,
