@@ -1,119 +1,121 @@
 {
-    "window.menuBarVisibility": "compact",
-
-    "extensions.experimental.affinity": {
-        "vscodevim.vim": 1
-    }, 
-
-    "workbench.colorTheme": "JetBrains Rider Dark Theme",
-    "workbench.layoutControl.enabled": false,
-    "workbench.activityBar.visible": false,
-    "workbench.editor.showTabs": false,
-    "workbench.colorCustomizations": {
-        "editorCursor.foreground": "#4eccb2",
-        "editorCursor.background": "#000",
-        "terminalCursor.foreground": "#4eccb2",
-        "terminalCursor.background": "#000",
-        "focusBorder": "#4a4d51",
-        "input.border": "#4a4d51",
-        "panelTitle.activeBorder": "#4a4d51",
-        "list.activeSelectionBackground": "#4a4d51",
-        "list.inactiveFocusBackground": "#3b3d40",
-        "list.focusBackground": "#3b3d40",
-        "editorSuggestWidget.selectedBackground": "#4a4d51",
-        "statusBarItem.remoteBackground": "#4a4d51",
-        "button.background": "#4a4d51",
-        "button.hoverBackground": "#4a4d51",
-        "listFilterWidget.outline": "#8e4e7f",
-        "statusBar.debuggingBackground": "#8e4e7f",
-        "menu.selectionBackground": "#8e4e7f",
-        "progressBar.background": "#8e4e7f",
-        "checkbox.border": "#8e4e7f",
-        "dropdown.border": "#8e4e7f",
+  "window.menuBarVisibility": "compact",
+  "window.zoomLevel": 1,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "workbench.colorTheme": "JetBrains Rider Dark Theme",
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.showTabs": false,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#4eccb2",
+    "editorCursor.background": "#000",
+    "terminalCursor.foreground": "#4eccb2",
+    "terminalCursor.background": "#000",
+    "focusBorder": "#4a4d51",
+    "input.border": "#4a4d51",
+    "panelTitle.activeBorder": "#4a4d51",
+    "list.activeSelectionBackground": "#4a4d51",
+    "list.inactiveFocusBackground": "#3b3d40",
+    "list.focusBackground": "#3b3d40",
+    "editorSuggestWidget.selectedBackground": "#4a4d51",
+    "statusBarItem.remoteBackground": "#4a4d51",
+    "button.background": "#4a4d51",
+    "button.hoverBackground": "#4a4d51",
+    "listFilterWidget.outline": "#8e4e7f",
+    "statusBar.debuggingBackground": "#8e4e7f",
+    "menu.selectionBackground": "#8e4e7f",
+    "progressBar.background": "#8e4e7f",
+    "checkbox.border": "#8e4e7f",
+    "dropdown.border": "#8e4e7f"
+  },
+  "scm.diffDecorations": "none",
+  "editor.codeActionsOnSave": {},
+  "editor.lineNumbers": "relative",
+  "editor.occurrencesHighlight": false,
+  "editor.fontSize": 12,
+  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+  "editor.codeLens": false,
+  "editor.minimap.enabled": false,
+  "terminal.integrated.profiles.windows": {
+    "pw-7": {
+      "path": "c:/Program Files/PowerShell/7/pwsh.exe"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "pw-7",
+  "terminal.integrated.fontSize": 12,
+  "volar.codeLens.references": false,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.leader": ";",
+  "vim.handleKeys": {
+    "<C-f>": true,
+    "<C-j>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Esc>", "<Esc>"],
+      "commands": [":nohl"]
     },
-
-    "scm.diffDecorations": "none",
-
-    "editor.codeActionsOnSave": {
-
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.files.save"]
     },
-    "editor.lineNumbers": "relative",
-    "editor.occurrencesHighlight": false,
-    "editor.fontSize": 12,
-    "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
-    "editor.codeLens": false,
-    "editor.minimap.enabled": false,
-
-    "terminal.integrated.profiles.windows": {
-        "pw-7": {
-            "path": "c:/Program Files/PowerShell/7/pwsh.exe"
-        }
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.splitEditor"]
     },
-    "terminal.integrated.defaultProfile.windows": "pw-7",
-    "terminal.integrated.fontSize": 12,
-
-    "volar.codeLens.references": false,
-
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.leader": ";",
-    "vim.handleKeys": {
-        "<C-f>": true,
-        "<C-j>": false
+    {
+      "before": ["<leader>", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
     },
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<Esc>", "<Esc>"],
-            "commands": [":nohl"]
-        },
-        {
-            "before": ["<leader>", "s"],
-            "commands": ["workbench.action.files.save"]
-        },
-        {
-            "before": ["<leader>", "w"],
-            "commands": ["workbench.action.splitEditor"]
-        },
-        {
-            "before": ["<leader>", "z"],
-            "commands": ["workbench.action.toggleZenMode"]
-        },
-        {
-            "before": ["<leader>", "f"],
-            "commands": ["editor.action.format"]
-        },
-        {
-            "before": ["<leader>", "g"],
-            "commands": ["workbench.view.scm"]
-        },
-        {
-            "before": ["f", "f"],
-            "commands": ["workbench.action.quickOpen"]
-        },
-        {
-            "before": ["f", "b"],
-            "commands": ["workbench.view.search"]
-        },
-        {
-            "before": ["f", "g"],
-            "commands": ["workbench.view.search"]
-        },
-        {
-            "before": ["K"],
-            "commands": ["editor.action.showHover"]
-        },
-        {
-            "before": ["g", "i"],
-            "commands": ["editor.action.goToImplementation"]
-        }
-    ]
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.format"]
+    },
+    {
+      "before": ["<leader>", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["space"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["f", "b"],
+      "commands": ["workbench.view.search"]
+    },
+    {
+      "before": ["f", "g"],
+      "commands": ["workbench.view.search"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    }
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
