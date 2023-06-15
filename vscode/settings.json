@@ -97,7 +97,7 @@
     },
     {
       "before": ["f", "b"],
-      "commands": ["workbench.view.search"]
+      "commands": ["workbench.action.quickOpen"]
     },
     {
       "before": ["f", "g"],
