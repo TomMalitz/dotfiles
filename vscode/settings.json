@@ -87,7 +87,7 @@
     },
     {
       "before": ["f", "f"],
-      "commands": ["workbench.action.quickOpen"]
+      "commands": ["workbench.action.quickOpenPreviousEditor"]
     },
     {
       "before": ["space"],
@@ -95,7 +95,7 @@
     },
     {
       "before": ["f", "b"],
-      "commands": ["workbench.action.quickOpen"]
+      "commands": ["workbench.action.quickOpenPreviousEditor"]
     },
     {
       "before": ["f", "g"],
