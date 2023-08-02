@@ -6,6 +6,7 @@
   "workbench.layoutControl.enabled": false,
   "workbench.activityBar.visible": false,
   "workbench.editor.showTabs": false,
+  "workbench.quickOpen.preserveInput": true,
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#4eccb2",
     "editorCursor.background": "#000",
