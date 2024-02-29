@@ -15,13 +15,22 @@
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+v",
-        "command": "workbench.action.nextPanelView",
-        "when": "panelFocus"
+        "key": "ctrl+;",
+        "command": "workbench.action.toggleCenteredLayout",
     },
+    // {
+    //     "key": "ctrl+v",
+    //     "command": "workbench.action.nextPanelView",
+    //     "when": "panelFocus"
+    // },
     {
         "key": "ctrl+g",
         "command": "workbench.view.search"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.view.debug",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+x",
@@ -37,13 +46,55 @@
         "when": "!panelFocus"
     },
     {
+        "key": "ctrl+l",
+        "command": "workbench.action.terminal.focusAtIndex2",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.terminal.newWithProfile",
+        "args": {
+            "profileName": "lazygit",
+            "name": "lazygit"
+        },
+        "when": "!panelFocus"
+    },
+    {
         "key": "ctrl+j",
         "command": "workbench.action.togglePanel",
         "when": "panelFocus"
     },
     {
+        "key": "ctrl+q",
+        "command": "workbench.profiles.actions.switchProfile",
+    },
+    {
         "key": "ctrl+f",
         "command": "workbench.view.explorer",
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.view.extension.todo-tree-container",
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "markdown.showPreviewToSide",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.splitEditorRight",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.splitEditorDown",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+n",
@@ -85,9 +136,9 @@
         "command": "list.select",
         "when": "filesExplorerFocus && explorerResourceIsFolder && !inputFocus"
     },
-    {
-        "key": "tab",
-        "command": "search.action.focusSearchList",
-        "when": "sideBarFocus && activeViewlet == 'workbench.view.search'"
-    }
+    // {
+    //     "key": "tab",
+    //     "command": "search.action.focusSearchList",
+    //     "when": "sideBarFocus && activeViewlet == 'workbench.view.search'"
+    // }
 ]
