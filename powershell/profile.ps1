@@ -3,9 +3,6 @@ Set-Alias vim nvim
 Set-Alias ll dir
 Set-Alias g git
 
-# Starship
-Invoke-Expression (&starship init powershell)
-
 # Zoxide
 Invoke-Expression (& {
     $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
