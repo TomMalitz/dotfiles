@@ -55,7 +55,7 @@ return {
   font = wezterm.font('JetBrains Mono', {weight = font_weight}),
   font_size = font_size,
   line_height = line_height,
-  color_scheme = 'SpaceGray Eighties',
+  color_scheme = 'Poimandres',
   colors = {
     background = dark_background,
     cursor_bg = '#4eccb2', -- #d1d1d1', -- '#c9c97b',
