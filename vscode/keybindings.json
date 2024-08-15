@@ -64,10 +64,10 @@
         "command": "workbench.action.togglePanel",
         "when": "panelFocus"
     },
-    {
-        "key": "ctrl+q",
-        "command": "workbench.profiles.actions.switchProfile",
-    },
+    // {
+    //     "key": "ctrl+q",
+    //     "command": "workbench.profiles.actions.switchProfile",
+    // },
     {
         "key": "ctrl+f",
         "command": "workbench.view.explorer",
