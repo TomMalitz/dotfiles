@@ -1,86 +1,51 @@
 {
-    // "workbench.colorCustomizations": {
-    //     "button.foreground": "#000",
-    //     "button.background": "#4eccb2",
-    //     "button.hoverBackground": "#6fefd5",
-    //     "dropdown.background": "#050505",
-    //     "gitDecoration.untrackedResourceForeground": "#4eccb2",
-    //     "gitDecoration.modifiedResourceForeground": "#aa8be4",
-    //     "editorGroupHeader.noTabsBackground": "#050505",
-    //     "editorGroupHeader.border": "#050505",
-    //     "editor.open": "#ff0000",
-    //     "editor.background": "#050505",
-    //     "editor.selectionBackground": "#173c35",
-    //     "editor.lineHighlightBackground": "#050505",
-    //     "editorGutter.background": "#050505",
-    //     "editorHoverWidget.background": "#050505",
-    //     "editorPane.background": "#050505",
-    //     "editorSuggestWidget.background": "#050505",
-    //     "editorSuggestWidget.foreground": "#989898",
-    //     "editorCursor.foreground": "#4eccb2",
-    //     "editorCursor.background": "#050505",
-    //     "focusBorder": "#050505",
-    //     "input.border": "#0f0f12",
-    //     "input.background": "#050505",
-    //     "list.highlightForeground": "#4eccb2",
-    //     "list.focusBackground": "#19191d"e
-    //     "list.inactiveFocusBackground": "#19191d",
-    //     "list.inactiveSelectionBackground": "#19191d",
-    //     "list.activeSelectionBackground": "#19191d",
-    //     "menu.selectionBackground": "#0f0f12",
-    //     "panel.background": "#050505",
-    //     "quickInput.background": "#050505",
-    //     "quickInput.foreground": "#989898",
-    //     "selection.background": "#173c35",
-    //     "sideBar.background": "#050505",
-    //     "sideBar.border": "#050505",
-    //     "statusBar.background": "#050505",
-    //     "statusBar.border": "#050505",
-    //     "statusBar.debuggingBackground": "#173c35",
-    //     "terminal.background": "#050505",
-    //     "terminalCursor.foreground": "#4eccb2",
-    //     "terminalCursor.background": "#050505",
-    //     "titleBar.activeBackground": "#050505",
-    //     "titleBar.inactiveBackground": "#050505",
-    //     "titleBar.border": "#050505",
-    //     "widget.border": "#434343",
-    // },
     "settingsSync.keybindingsPerPlatform": false,
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
-    "vscode_custom_css.imports": [
-        "file:///C:/Users/tmali/Documents/vscode-custom.css",
-        "file:///C:/Users/NM320042/Documents/vscode-custom.css"
-    ],
-    "window.menuBarVisibility": "compact",
-    "window.commandCenter": false,
     "window.zoomLevel": 2,
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}",
+    // poimandres custom colors
     "workbench.colorCustomizations": {
         "editorCursor.background": "#050505",
         "editorCursor.foreground": "#5de4c7",
         "scrollbarSlider.background": "#28313a",
         "selection.background": "#323849",
         "statusBar.background": "#0f1015",
-        "statusBarItem.errorBackground": "#371c2a"
-        // "sideBar.background": "#13151c",
+        "quickInput.background": "#0f1015",
+        "statusBarItem.errorBackground": "#371c2a",
+        "titleBar.activeBackground": "#0f1015",
+        "terminal.background": "#0f1015",
+        "panel.background": "#0f1015",
+        "sideBar.background": "#0f1015",
+        "statusBarItem.warningBackground": "#371c2a",
+        "debugView.exceptionLabelBackground": "#371c2a",
+        "debugExceptionWidget.background": "#371c2a"
         // "quickInput.background": "#1d252c",
         // "quickInputList.focusBackground": "#28313a",
     },
+    // monochrome custom colors
+    // "workbench.colorCustomizations": {
+    //     "selection.background": "#424241"
+    // },
     "search.exclude": {
         "**/node_modules": true,
         "**/bower_components": true,
         "**/*.code-search": true,
         "**/AppData/Local/Temp": true
     },
-    "workbench.sideBar.location": "right",
+    "breadcrumbs.enabled": false,
+    "debug.console.fontSize": 12,
+    "zenMode.showTabs": "none",
+    "zenMode.fullScreen": false,
+    "zenMode.hideStatusBar": false,
+    "workbench.panel.defaultLocation": "bottom",
+    "workbench.panel.opensMaximized": "never",
     "workbench.editor.showTabs": "none",
     "workbench.quickOpen.preserveInput": true,
     "workbench.quickOpen.closeOnFocusLost": true,
     "workbench.statusBar.visible": true,
-    "workbench.colorTheme": "poimandres",
-    "workbench.layoutControl.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
     "workbench.activityBar.location": "hidden",
     "workbench.editor.editorActionsLocation": "hidden",
     "workbench.tree.renderIndentGuides": "none",
@@ -89,18 +54,21 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.fileNesting.expand": false,
     "explorer.decorations.colors": false,
-    "search.experimental.quickAccess.preserveInput": true,
-    "breadcrumbs.enabled": false,
-    "background.enabled": true,
     // "background.interval": 1000,
+    "vscode_custom_css.imports": [
+        "file:///C:/Users/tmali/Documents/vscode-custom/vscode-custom.css",
+        "file:///C:/Users/NM320042/Documents/vscode-custom/vscode-custom.css"
+    ],
+    "background.enabled": true,
     "background.fullscreen": {
         "images": [
-            // "https://wallpapercave.com/wp/wp3571390.jpg",
-            "https://cdna.artstation.com/p/assets/images/images/024/734/098/large/alexander-lebedev-guyver1-2.jpg?1583352866"
+            "https://images.unsplash.com/photo-1521489871110-81dc5a61dbda?q=80&w=3737&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            // "file:///C:/Users/NM320042/Documents/vscode-custom/mountain-range.jpg",
+            // "file:///C:/Users/tmali/Documents/vscode-custom/mountain-range.jpg",
         ],
-        "opacity": 0.98,
-        "position": "50% 50%",
-        "size": "99.9%"
+        "opacity": 0.97,
+        "position": "50%",
+        "size": "cover"
     },
     "emmet.includeLanguages": {
         "razor": "html"
@@ -108,35 +76,40 @@
     "prettier.semi": false,
     "prettier.printWidth": 110,
     "scm.diffDecorations": "none",
+    "gitlens.currentLine.enabled": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.snippetSuggestions": "top",
     "editor.lightbulb.enabled": "off",
-    "editor.renderLineHighlight": "none",
+    "editor.renderLineHighlight": "line",
     "editor.renderWhitespace": "none",
     "editor.cursorStyle": "line",
     "editor.cursorBlinking": "phase",
     "editor.cursorSurroundingLines": 5,
-    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSmoothCaretAnimation": "off",
     "editor.glyphMargin": true,
-    "editor.showFoldingControls": "never",
     "editor.bracketPairColorization.enabled": false,
     "editor.guides.highlightActiveBracketPair": false,
     "editor.guides.bracketPairsHorizontal": false,
     "editor.guides.indentation": false,
+    "editor.detectIndentation": true,
     // "editor.hideCursorInOverviewRuler": true,
     "editor.overviewRulerBorder": false,
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
     "editor.codeActionsOnSave": {},
     "editor.smoothScrolling": true,
-    "editor.lineNumbers": "relative",
+    "editor.lineNumbers": "on",
     "editor.occurrencesHighlight": "off",
     "editor.fontSize": 12,
-    "editor.lineHeight": 1.25,
+    "editor.lineHeight": 1.1,
     "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
     "editor.codeLens": false,
     "editor.rulers": [],
     "editor.minimap.enabled": false,
     "editor.colorDecorators": false,
     "tailwindCSS.colorDecorators": false,
+    "terminals.multiplexer": "screen",
+    "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
     "terminal.integrated.defaultProfile.windows": "powershell7",
     "terminal.integrated.profiles.windows": {
@@ -199,6 +172,16 @@
         {
             "before": [
                 "<leader>",
+                "m",
+                "p"
+            ],
+            "commands": [
+                "markdown.showPreview"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "v"
             ],
             "commands": [
@@ -226,6 +209,15 @@
         {
             "before": [
                 "<leader>",
+                "t"
+            ],
+            "commands": [
+                "editor.inlayHints.toggle"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "w"
             ],
             "commands": [
@@ -244,6 +236,7 @@
         {
             "before": [
                 "<leader>",
+                "<leader>",
                 "f"
             ],
             "commands": [
@@ -253,15 +246,44 @@
         {
             "before": [
                 "<leader>",
+                "<leader>",
                 "g"
             ],
             "commands": [
-                "workbench.view.scm"
+                "git.viewFileHistory"
             ]
         },
         {
             "before": [
-                "f",
+                "<leader>",
+                "<leader>",
+                "l"
+            ],
+            "commands": [
+                "gitlens.toggleLineBlame"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.openRecent"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "commands": [
+                "workbench.profiles.actions.switchProfile"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "f"
             ],
             "commands": [
@@ -278,7 +300,7 @@
         },
         {
             "before": [
-                "f",
+                "<leader>",
                 "b"
             ],
             "commands": [
@@ -287,11 +309,12 @@
         },
         {
             "before": [
-                "f",
+                "<leader>",
                 "g"
             ],
             "commands": [
-                "workbench.action.experimental.quickTextSearch"
+                "workbench.action.quickTextSearch"
+                // "find-it-faster.findWithinFiles"
             ]
         },
         {
@@ -351,7 +374,13 @@
     "terminal.integrated.smoothScrolling": true,
     "editor.stickyScroll.enabled": false,
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.tabSize": 2
+    },
+    "[postcss]": {
+        "editor.tabSize": 2
+    },
+    "[tf]": {
         "editor.tabSize": 2
     },
     "[jsonc]": {
@@ -365,7 +394,7 @@
         "editor.tabSize": 2
     },
     "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "Vue.volar",
         "editor.tabSize": 2
     },
     "[html]": {
@@ -376,4 +405,59 @@
         "sound": "off"
     },
     "workbench.iconTheme": "minimal-icons-without-explorer-arrows",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.gpuAcceleration": "on",
+    "nugetpackagemanagergui.packageSources": [
+        {
+            "sourceName": "nmdigitalplatform@Local",
+            "preRelease": true,
+            "authorization": {
+                // The auth types (basicAuth / none)
+                "authType": "basicAuth",
+                // It is required if authType is equal to basicAuth
+                "username": "ali.asadi",
+                // It is required if authType is equal to basicAuth
+                "password": "ACCESS_TOKEN_KEY"
+            },
+            //The NuGet endpoint address for getting package versions
+            //* The extension injects {{packageName}} property automatically
+            // NuGet  Host  "https://api.nuget.org/v3-flatcontainer/{{packageName}}/index.json"
+            // BaGet  Host  "http://localhost/v3/package/{{packageName}}/index.json"
+            // GitHub Host  "https://nuget.pkg.github.com/username/download/{{packageName}}/index.json"
+            // GitLab Host  "https://gitlab.com/api/v4/projects/x/packages/nuget/download/{{packageName}}/index.json"
+            // Nexus  Host  "http://localhost/repository/nuget-hosted/v3/content/{{packageName}}/index.json"
+            // Azure  Host  "https://pkgs.dev.azure.com/username/guid/_packaging/guid/nuget/v3/flat2/{{packageName}}/index.json"
+            // ProGet Host: "http://localhost/nuget/Test-Feed/v3/flatcontainer/{{packageName}}/index.json"
+            "packageVersionsUrl": "https://pkgs.dev.azure.com/NMHC/_packaging/nmdigitalplatform@Local/nuget/v3/index.json",
+            // The package url in the host server
+            // NuGet  Host  "https://www.nuget.org/packages/{{packageName}}"
+            // Azure  Host  "https://dev.azure.com/user/project/_artifacts/feed/feed-name/NuGet/{{packageName}}/{{version}}/overview"
+            // GitHub Host  "https://nuget.pkg.github.com/username/{{packageName}}/index.json"
+            // GitLab Host  "https://gitlab.com/user/project/-/packages?type=&orderBy=name&sort=asc&search[]={{packageName}}"
+            // ProGet Host: "http://localhost/feeds/Test-Feed/{{packageName}}/versions"
+            "packageUrl": "https://pkgs.dev.azure.com/NMHC/_packaging/nmdigitalplatform@Local/nuget/v3/index.json",
+            //The NuGet endpoint address for searching packages
+            // NuGet  Host "https://azuresearch-usnc.nuget.org/query"
+            // BaGet  Host "http://localhost/v3/search"
+            // GitHub Host ""https://nuget.pkg.github.com/username/query""
+            // GitLab Host "https://gitlab.com/api/v4/projects/x/packages/nuget/query"
+            // Nexus  Host "http://localhost/repository/nuget-hosted/v3/query/0"
+            // Azure  Host "https://pkgs.dev.azure.com/username/guid/_packaging/guid/nuget/v3/query2"
+            // ProGet Host:"http://localhost/nuget/Test-Feed/v3/search"
+            "searchUrl": "https://azuresearch-usnc.nuget.org/query",
+            // The source types (server / local)
+            // * local type isn't supported.
+            "sourceType": "server",
+        }
+    ],
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "search.quickAccess.preserveInput": true,
+    "rust-analyzer.check.command": "clippy",
+    "window.menuBarVisibility": "compact",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "poimandres",
+    "workbench.sideBar.location": "right",
+    "terminal.integrated.tabs.location": "left",
+    "terminal.integrated.tabs.enabled": false,
 }
