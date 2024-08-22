@@ -1,8 +1,38 @@
 [
     {
+        "key": "cmd+u",
+        "command": "extension.vim_ctrl+u",
+        "when": "isMac && textInputFocus"
+    },
+    {
+        "key": "cmd+d",
+        "command": "extension.vim_ctrl+d",
+        "when": "isMac && textInputFocus"
+    },
+    {
+        "key": "cmd+r",
+        "command": "extension.vim_ctrl+r",
+        "when": "isMac && textInputFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "cmd+i",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
         "key": "ctrl+t",
         "command": "workbench.action.terminal.focusNext",
         "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "isMac && terminalFocus"
     },
     {
         "key": "ctrl+n",
@@ -10,12 +40,27 @@
         "when": "terminalFocus"
     },
     {
+        "key": "cmd+n",
+        "command": "workbench.action.terminal.new",
+        "when": "isMac && terminalFocus"
+    },
+    {
         "key": "ctrl+k",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
     },
     {
+        "key": "cmd+k",
+        "command": "workbench.action.terminal.kill",
+        "when": "isMac && terminalFocus"
+    },
+    {
         "key": "ctrl+;",
+        "command": "workbench.action.toggleCenteredLayout",
+    },
+    {
+        "key": "cmd+;",
+        "when": "isMac",
         "command": "workbench.action.toggleCenteredLayout",
     },
     // {
@@ -28,12 +73,27 @@
         "command": "workbench.view.search"
     },
     {
+        "key": "cmd+g",
+        "when": "isMac",
+        "command": "workbench.view.search"
+    },
+    {
         "key": "ctrl+t",
         "command": "workbench.view.debug",
         "when": "!terminalFocus"
     },
     {
+        "key": "cmd+t",
+        "command": "workbench.view.debug",
+        "when": "isMac && !terminalFocus"
+    },
+    {
         "key": "ctrl+x",
+        "command": "workbench.view.extensions"
+    },
+    {
+        "key": "cmd+x",
+        "when": "isMac",
         "command": "workbench.view.extensions"
     },
     {
@@ -44,6 +104,11 @@
         "key": "ctrl+j",
         "command": "workbench.action.terminal.focus",
         "when": "!panelFocus"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "isMac && !panelFocus"
     },
     {
         "key": "ctrl+l",
@@ -73,7 +138,17 @@
         "command": "workbench.view.explorer",
     },
     {
+        "key": "cmd+f",
+        "when": "isMac",
+        "command": "workbench.view.explorer",
+    },
+    {
         "key": "ctrl+e",
+        "command": "workbench.view.extension.todo-tree-container",
+    },
+    {
+        "key": "cmd+e",
+        "when": "isMac",
         "command": "workbench.view.extension.todo-tree-container",
     },
     {
@@ -82,9 +157,19 @@
         "when": "editorFocus"
     },
     {
+        "key": "cmd+k",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "isMac && editorFocus"
+    },
+    {
         "key": "ctrl+p",
         "command": "markdown.showPreviewToSide",
         "when": "editorFocus"
+    },
+    {
+        "key": "cmd+p",
+        "command": "markdown.showPreviewToSide",
+        "when": "isMac && editorFocus"
     },
     {
         "key": "ctrl+v",
@@ -92,14 +177,29 @@
         "when": "editorFocus"
     },
     {
+        "key": "cmd+v",
+        "command": "workbench.action.splitEditorRight",
+        "when": "isMac && editorFocus"
+    },
+    {
         "key": "ctrl+h",
         "command": "workbench.action.splitEditorDown",
         "when": "editorFocus"
     },
     {
+        "key": "cmd+h",
+        "command": "workbench.action.splitEditorDown",
+        "when": "isMac && editorFocus"
+    },
+    {
         "key": "ctrl+n",
         "command": "editor.action.addSelectionToNextFindMatch",
         "when": "editorFocus"
+    },
+    {
+        "key": "cmd+n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "isMac && editorFocus"
     },
     {
         "key": "space",
