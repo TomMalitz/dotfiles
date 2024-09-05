@@ -29,9 +29,9 @@
 
 #### Apps
 
-HotKey
-Raycast
-BetterDisplay
+- HotKey
+- Raycast
+- BetterDisplay
 
 #### Commands
 
