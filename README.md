@@ -21,3 +21,18 @@
 - `install.ps1` Installs the dependencies and syncs the config files. Run with `-u` to update the dependencies instead of install.
 
 - `sync.ps1` Sync the config files to their correct place.
+
+
+# Machine Setups
+
+### macOS
+
+#### Apps
+
+HotKey
+Raycast
+BetterDisplay
+
+#### Commands
+
+- key-repeat for vscode vim: `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false`
